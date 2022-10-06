@@ -9,6 +9,7 @@
 .section{
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 .promo__container{
     padding: 0;
@@ -74,4 +75,53 @@
     font-size: 2rem;
     text-transform: uppercase;
     border-radius: 17px;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0 auto;
+    width: 200px;
+}
+/*structrure*/
+.structure__container{
+   display: grid; 
+   grid-template-columns: 1fr 1fr 1fr; 
+   grid-template-rows: 1fr 1fr 1fr; 
+   gap: 40px 0px; 
+   grid-template-areas: 
+    "prop1 product prop2"
+    "prop3 product prop4"
+    "prop5 product prop6"; 
+    margin: 30px 100px;
+}
+.structure__product{ 
+    justify-self: center; 
+    align-self: center; 
+    grid-area: product;
+    padding: 65px 0;  
+}
+.structrue__prop1 { grid-area: prop1; }
+.structrue__prop2 { grid-area: prop2; }
+.structrue__prop3 { grid-area: prop3; }
+.structrue__prop4 { grid-area: prop4; }
+.structrue__prop5 { grid-area: prop5; }
+.structrue__prop6 { grid-area: prop6; }
+.structrue__prop-img{
+    
+}
+.structrue__prop-img{
+    background: url(img/prod.png) no-repeat 50%;
+    max-width: 100px;
+    max-height: 100px;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    border-radius: 100%;
+    margin:0 auto;
+}
+.structrue__product-img{
+    height: 50vh;
+}
+.structrue__prop-text{
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
