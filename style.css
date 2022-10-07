@@ -137,223 +137,61 @@
     font-size: 1.3rem;
 }
 /*comments*/
-@keyframes tonext {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: 100%;
-    }
-    98% {
-      left: 100%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-  
-  @keyframes tostart {
-    75% {
-      left: 0;
-    }
-    95% {
-      left: -300%;
-    }
-    98% {
-      left: -300%;
-    }
-    99% {
-      left: 0;
-    }
-  }
-  
-  @keyframes snap {
-    96% {
-      scroll-snap-align: center;
-    }
-    97% {
-      scroll-snap-align: none;
-    }
-    99% {
-      scroll-snap-align: none;
-    }
-    100% {
-      scroll-snap-align: center;
-    }
-  }
-  
-  
-  * {
-    box-sizing: border-box;
-    scrollbar-color: transparent transparent; 
-    scrollbar-width: 0px;
-  }
-  
-  *::-webkit-scrollbar {
-    width: 0;
-  }
-  
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    background: transparent;
-    border: none;
-  }
-  
-  * {
-    -ms-overflow-style: none;
-  }
-  
-  ol, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .carousel {
-    position: relative;
-    padding-top: 75%;
-    filter: drop-shadow(0 0 10px #0003);
-    perspective: 100px;
-  }
-  
-  .carousel__viewport {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    overflow-x: scroll;
-    counter-reset: item;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .carousel__slide {
-    position: relative;
-    flex: 0 0 100%;
-    width: 100%;
-    counter-increment: item;
-    background: #fff;
-  }
-  
-  .carousel__slide:nth-child(even) {
-    background-color: #99f;
-  }
-  
-  .carousel__snapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    scroll-snap-align: center;
-  }
-  
-  @media (hover: hover) {
-    .carousel__snapper {
-      animation-name: tonext, snap;
-      animation-timing-function: ease;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-    }
-  
-    .carousel__slide:last-child .carousel__snapper {
-      animation-name: tostart, snap;
-    }
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    .carousel__snapper {
-      animation-name: none;
-    }
-  }
-  
-  .carousel:hover .carousel__snapper,
-  .carousel:focus-within .carousel__snapper {
-    animation-name: none;
-  }
-  
-  .carousel__navigation {
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    left: 0;
-    text-align: center;
-  }
-  
-  .carousel__navigation-list,
-  .carousel__navigation-item {
-    display: inline-block;
-  }
-  
-  .carousel__navigation-button {
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #333;
-    background-clip: content-box;
-    border: 0.25rem solid transparent;
-    border-radius: 50%;
-    font-size: 0;
-    transition: transform 0.1s;
-  }
 .comments{
-    background: rgb(241,243,255);
-    background: linear-gradient(180deg, rgba(241,243,255,1) 0%, rgba(255,242,255,1) 100%);  
+  background: rgb(241,243,255);
+  background: linear-gradient(180deg, rgba(241,243,255,1) 0%, rgba(255,242,255,1) 100%);  
 }
 .comments__container{
-    max-width: 580px;
-    text-align: center;
-    margin: 0 auto;
+  max-width: 580px;
+  text-align: center;
+  margin: 0 auto;
 }
 .comments__title{
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
-.carousel__comments-block{
-    height: 100%;
-    padding-top: 20px;
+.slider__block{
+  background: #fff;
+  height:500px;
+  overflow: hidden;
 }
-.photo1{
-    background: url(img/man1.jpg) no-repeat 50%;
+.slider__buyer{
+  width: 150px;
+  height: 150px;
+  margin: 40px auto 45px;
+  border-radius: 50%;
 }
-.photo2{
-    background: url(img/man2.jpg) no-repeat 50%;
+.buyer1{
+  background: url(img/man1.jpg) no-repeat 50%;
+  background-size: cover;
 }
-.photo3{
-    background: url(img/man3.jpg) no-repeat 50%;
+.buyer2{
+  background: url(img/man2.jpg) no-repeat 50%;
+  background-size: cover;
 }
-.carousel__comments-photo{
-    max-width: 200px;
-    max-height: 200px;
-    width: 150px;
-    height: 150px;
-    background-size: contain;
-    border-radius: 100%;
-    margin: 15px auto 0;  
+.buyer3{
+  background: url(img/man3.jpg) no-repeat 50%;
+  background-size: cover;
 }
-.carousel__comments-name{
-    font-size: 1.5rem;
-    font-weight: bold;
+.slider__buyer-avatar{
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
 }
-.carousel__comments-desc{
-    width: 70%;
-    font-size: 1.2rem;
-    margin: 0 auto;
-    height: 155px;
-    display: block;
-    text-align: left;
-    padding: 5px 10px;
-    overflow: hidden;
+.slider__buyer-bio{
+  padding: 0;
+  width: 76%;
+  margin: 30px auto;
+  font-size: 1.5rem;
+  text-align: left;
+}
+.slider__wrapper {
+  overflow: hidden;
 }
 /*description*/
 .description{
-    background: rgb(241,243,255);
-    background: linear-gradient(180deg, rgba(241,243,255,1) 0%, rgba(255,242,255,1) 100%);
+  background: rgb(241,243,255);
+  background: linear-gradient(180deg, rgba(241,243,255,1) 0%, rgba(255,242,255,1) 100%);
 }
 .description__container{
     padding: 0;
@@ -537,4 +375,83 @@ input:not(:focus):valid ~ .floating-label{
     display: inline-block;
     animation: priceAnim 2s infinite;
     color: #2fbc2f;
+}
+/*media query*/
+@media screen and (min-width: 920px) and (max-width: 1560px) {
+    .buy_form__order {
+        gap: 150px;
+    }
+    .description__container-head {
+        padding: 0 40px;
+    }
+    .description__prop-item {
+        font-size: 2.5rem;
+    }
+    .description__prop {
+        gap: 150px;
+    }
+}
+@media screen and (max-width: 920px) {
+    .description__container-head {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+    .buy_form__order {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .buy_form__right {
+        border: 5px solid #d497dd;
+        width: 100%;
+        max-width: 600px;
+    }
+    .form-name, .form-tel {
+        width: 100%;
+    }
+    .buy_form__btn {
+        height: 60px;
+    }
+    .section, .buy_form__container, .description__container {
+        height: auto;
+    }
+    .description__text {
+        padding: 0 15px;
+    }
+    .description__prop {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 100px;
+    }
+    .comments__container {
+        min-height: 680px;
+    }
+    .structure__container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px 0px;
+        grid-template-areas:
+            "prop1 prop2"
+            "prop3 prop4"
+            "prop5 prop6";
+        margin: 30px 10px;
+    }
+    .structure__product{
+        display: none;
+    }
+    .structure{
+        min-height: 620px;
+    }
+    .slider__control[data-slide="next"] {
+      right: 0;
+    }
+    .slider__control[data-slide="prev"] {
+      left: 0;
+  }
+  .comments__container {
+    max-width: 420px;
+  }
+  .slider__buyer-bio {
+    font-size: 1.3rem;
+  }
 }

@@ -5,7 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="utils/normalize.css"/>
+        <link rel="stylesheet" href="utils/itc-slider.css">
         <link rel="stylesheet" href="style.css"/>
+        <script src="utils/itc-slider.js" defer></script>
     </head>
     <body>
         <div class="wrapper">
@@ -61,61 +63,39 @@
                 <a href="#buy" class="promo__link">Купить</a>
             </section>
             <section class="comments section">
-                <div class="comments__container">
+                <div class="comments__container" data-slider="itc-slider">
                     <h2 class="comments__title">Мнение покупателей</h2>
-                    
-                    <div class="carousel" aria-label="Gallery">
-                      <ol class="carousel__viewport">
-                        <li id="carousel__slide1"
-                            tabindex="0"
-                            class="carousel__slide">
-                            <div class="carousel__comments-block">
-                                <div class="carousel__comments-photo photo1"></div>
-                                <p class="carousel__comments-name">Иван</p>
-                                <p class="carousel__comments-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            </p>
+                    <div class="slider">
+                        <div class="slider__wrapper">
+                          <div class="slider__items">
+                            <div class="slider__item">
+                                <div class="slider__block">
+                                    <div alt="buyer1" class="slider__buyer buyer1"></div>
+                                    <p class="slider__buyer-avatar">Иван</p>
+                                    <p class="slider__buyer-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
                             </div>
-                          <div class="carousel__snapper">
+                            <div class="slider__item">
+                                <div class="slider__block">
+                                    <div alt="buyer2" class="slider__buyer buyer2"></div>
+                                    <p class="slider__buyer-avatar">Андрей</p>
+                                    <p class="slider__buyer-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <div class="slider__block">
+                                    <div alt="buyer2" class="slider__buyer buyer2"></div>
+                                    <p class="slider__buyer-avatar">Лука</p>
+                                    <p class="slider__buyer-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
                           </div>
-                        </li>
-                        <li id="carousel__slide2"
-                            tabindex="0"
-                            class="carousel__slide">
-                            <div class="carousel__comments-block">
-                                <div class="carousel__comments-photo photo2"></div>
-                                <p class="carousel__comments-name">Иван</p>
-                                <p class="carousel__comments-desc">Я гей</p>
-                            </div>
-                          <div class="carousel__snapper"></div>
-                        </li>
-                        <li id="carousel__slide3"
-                            tabindex="0"
-                            class="carousel__slide">
-                            <div class="carousel__comments-block">
-                                <div class="carousel__comments-photo photo3"></div>
-                                <p class="carousel__comments-name">Иван</p>
-                                <p class="carousel__comments-desc">Я гей</p>
-                            </div>
-                          <div class="carousel__snapper"></div>
-                        </li>
-                      </ol>
-                      <aside class="carousel__navigation">
-                        <ol class="carousel__navigation-list">
-                          <li class="carousel__navigation-item">
-                            <a href="#carousel__slide1"
-                               class="carousel__navigation-button">Go to slide 1</a>
-                          </li>
-                          <li class="carousel__navigation-item">
-                            <a href="#carousel__slide2"
-                               class="carousel__navigation-button">Go to slide 2</a>
-                          </li>
-                          <li class="carousel__navigation-item">
-                            <a href="#carousel__slide3"
-                               class="carousel__navigation-button">Go to slide 3</a>
-                          </li>
-                        </ol>
-                      </aside>
-                    </div>
+                        </div>
+                        <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+                        <button class="slider__control" data-slide="prev"></button>
+                        <button class="slider__control" data-slide="next"></button>
+                      </div>
+
                 </div>
             </section>
             <section class="description section">
@@ -166,10 +146,8 @@
                 </div>
             </section>
         </div>
+        <script type="text/javascript" src="utils/timer.js"></script>
+        <script type="text/javascript" src="utils/scroll.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     </body>
-    <script type="text/javascript" src="utils/timer.js"></script>
-    <script type="text/javascript" src="utils/scroll.js"></script>
-    <!-- Библиотека jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
 </html>
