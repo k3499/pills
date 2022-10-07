@@ -17,19 +17,16 @@
                 <div class="promo__container section">
                     <h1 class="promo__title">LevelUp</h1>
                     <p class="promo__under-title">Средство для потенции<p>
-                    <div class="promo_prod-container">
+                    <div class="promo__prod-container">
                         <img src="img/prod.png" class="promo__product">
-                        <ul class="promo_param">
-                            <li class="promo_param-item">100% работоспособность</li>
-                            <li class="promo_param-item">0% пободных реакций</li>
-                            <li class="promo_param-item">8млн счастливых пар</li>
-                            <li class="promo_param-item">
-                                <a href="#" class="promo_link">Купить</a>
-                            </li>
+                        <ul class="promo__param">
+                            <li class="promo__param-item"><span class="promo__num">100%</span> работоспособность</li>
+                            <li class="promo__param-item"><span class="promo__num">69</span> активных компонентов</li>
+                            <li class="promo__param-item"><span class="promo__num">8млн</span> счастливых пар</li>
                         </ul>
-                        
                     </div>
-                </p>
+                    <a href="#buy" class="promo__link">Купить</a>
+                </div>
             </section>
             <section class="structure section">
                 <div class="structure__container">   
@@ -37,31 +34,31 @@
                         <img src="img/prod.png" class="structrue__product-img">
                     </div>
                     <div class="structrue__prop1">
-                        <div class="structrue__prop-img"></div>
-                        <p class="structrue__prop-text">Крутость</p>
+                        <div class="structrue__prop-img structrue__prop-img1"></div>
+                        <p class="structrue__prop-text">Злаки</p>
                     </div>
                     <div class="structrue__prop2">
                         <div class="structrue__prop-img"></div>
-                        <p class="structrue__prop-text">Крутость</p>
+                        <p class="structrue__prop-text">Витамины</p>
                     </div>
                     <div class="structrue__prop3">
                         <div class="structrue__prop-img"></div>
-                        <p class="structrue__prop-text">Крутость</p>
+                        <p class="structrue__prop-text">Микроэлементы</p>
                     </div>
                     <div class="structrue__prop4">
                         <div class="structrue__prop-img"></div>
-                        <p class="structrue__prop-text">Крутость</p>
+                        <p class="structrue__prop-text">Макроэлементы</p>
                     </div>
                     <div class="structrue__prop5">
                         <div class="structrue__prop-img"></div>
-                        <p class="structrue__prop-text">Крутость</p>
+                        <p class="structrue__prop-text">Металлы</p>
                     </div>
                     <div class="structrue__prop6">
                         <div class="structrue__prop-img"></div>
-                        <p class="structrue__prop-text">Крутость</p>
+                        <p class="structrue__prop-text">Сила земли</p>
                     </div>
                 </div>
-                <a href="#" class="promo_link">Купить</a>
+                <a href="#buy" class="promo__link">Купить</a>
             </section>
             <section class="comments section">
                 <div class="comments__container">
@@ -73,9 +70,10 @@
                             tabindex="0"
                             class="carousel__slide">
                             <div class="carousel__comments-block">
-                                <div class="carousel__comments-photo"></div>
-                                <p class="carousel__comments-name">имя</p>
-                                <p class="carousel__comments-desc">описание</p>
+                                <div class="carousel__comments-photo photo1"></div>
+                                <p class="carousel__comments-name">Иван</p>
+                                <p class="carousel__comments-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </p>
                             </div>
                           <div class="carousel__snapper">
                           </div>
@@ -83,16 +81,21 @@
                         <li id="carousel__slide2"
                             tabindex="0"
                             class="carousel__slide">
+                            <div class="carousel__comments-block">
+                                <div class="carousel__comments-photo photo2"></div>
+                                <p class="carousel__comments-name">Иван</p>
+                                <p class="carousel__comments-desc">Я гей</p>
+                            </div>
                           <div class="carousel__snapper"></div>
                         </li>
                         <li id="carousel__slide3"
                             tabindex="0"
                             class="carousel__slide">
-                          <div class="carousel__snapper"></div>
-                        </li>
-                        <li id="carousel__slide4"
-                            tabindex="0"
-                            class="carousel__slide">
+                            <div class="carousel__comments-block">
+                                <div class="carousel__comments-photo photo3"></div>
+                                <p class="carousel__comments-name">Иван</p>
+                                <p class="carousel__comments-desc">Я гей</p>
+                            </div>
                           <div class="carousel__snapper"></div>
                         </li>
                       </ol>
@@ -109,10 +112,6 @@
                           <li class="carousel__navigation-item">
                             <a href="#carousel__slide3"
                                class="carousel__navigation-button">Go to slide 3</a>
-                          </li>
-                          <li class="carousel__navigation-item">
-                            <a href="#carousel__slide4"
-                               class="carousel__navigation-button">Go to slide 4</a>
                           </li>
                         </ol>
                       </aside>
@@ -132,11 +131,45 @@
                     </ul>
                 </div>
             </section>
-            <section class="buy_form section">
+            <section class="buy_form section" id="buy">
                 <div class="buy_form__container">
-                   4
+                    <h1 class="buy_form__title">LevelUp</h1>
+                    <p class="buy_form__under-title">Средство для потенции<p>
+                    <p class="buy_form__promo">Специальная цена доступна еще: <span id="time"></span></p>
+                    <div class="buy_form__order">
+                        <div class="buy_form__left">
+                            <img src="img/prod.png" alt="prod" class="buy_form__img">
+                            <div class="buy_form__price">
+                                <p class="buy_form__old-price">$10</p> <div class="buy_form__new-price">$9,99</div> 
+                            </div>
+                        </div>
+                        <div class="buy_form__right">
+                            <form>
+                                    <div class="buy_form__name">
+                                        <label for="form-name" class="buy_form__label">Имя<span class="formbuilder-required">*</span></label>
+                                        <div class="buy_form__name-input">
+                                            <input type="text" class="form-name" name="form-name" access="false" id="form-name" required="required" aria-required="true" required/>
+                                            <span class="floating-label">Пример: Иван</span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_form__tel">
+                                        <label for="form-tel" class="buy_form__label">Телефон<span class="formbuilder-required">*</span></label>
+                                        <div class="buy_form__name-input">
+                                            <input type="text" class="form-tel" name="form-tel" access="false" id="form-tel" required="required" aria-required="true" required/>
+                                            <span class="floating-label">Пример: 88005553535</span>
+                                        </div>
+                                    </div>
+                                        <button type="submit" class="buy_form__btn" name="form-tel" access="false" style="default" id="form-tel">Заказать</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
     </body>
+    <script type="text/javascript" src="utils/timer.js"></script>
+    <script type="text/javascript" src="utils/scroll.js"></script>
+    <!-- Библиотека jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 </html>

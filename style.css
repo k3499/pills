@@ -25,32 +25,32 @@
     position: absolute;
     min-height: 100%;
     min-width: 100%;
+    max-width: 100vw;
     top: 0; left: 0;
     width: auto; 
     height: auto;
     z-index: -100;
+    object-fit: cover;
 }
 .promo__title{
     text-align: center;
-    margin: 25px auto 0;
+    margin: 10px auto 0;
+    font-size: 5rem;
 }
 .promo__under-title{
     text-align: center;
-    margin: 15px auto;
-    color: #232959;
+    margin: 5px auto;
+    color: #0a0a0a;
     display: block;
-    width: 280px;
-    padding: 10px 0;
-    font-size: 21px;
-    letter-spacing: 0,2px;
-    font-weight: bold;
-    background: rgb(204,158,236);
-    background: linear-gradient(90deg, rgba(204,158,236,1) 25%, rgba(154,195,249,1) 100%);
+    width: 340px;
+    padding: 0;
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
 }
 .promo__product{
     height: 50vh;
 }
-.promo_prod-container{
+.promo__prod-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -58,27 +58,33 @@
     gap: 110px;
     margin-top: 50px;
 }
-.promo_param{
+.promo__param{
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.promo_param-item{
-    font-size: 1.3rem;
+.promo__param-item{
+    font-size: 1.7rem;
     margin-bottom: 40px;
+    border-left: 6px solid #aa2fbc;
+    padding-left: 15px;
 }
-.promo_link{
+.promo__num{
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.promo__link{
     text-decoration: none;
     display: block;
-    background: rgb(204 158 236);
-    color: #350442;
+    background: #aa2fbc;
+    color: #ffffff;
     font-size: 2rem;
     text-transform: uppercase;
-    border-radius: 17px;
     text-align: center;
-    padding: 5px 0;
-    margin: 0 auto;
-    width: 200px;
+    padding: 10px 0;
+    margin: 22px auto 0;
+    width: 300px;
 }
 /*structrure*/
 .structure{
@@ -108,11 +114,11 @@
 .structrue__prop4 { grid-area: prop4; }
 .structrue__prop5 { grid-area: prop5; }
 .structrue__prop6 { grid-area: prop6; }
-.structrue__prop-img{
+.structrue__prop-img1{
     
 }
 .structrue__prop-img{
-    background: url(img/prod.png) no-repeat 50%;
+    background: url(img/prop.jpg) no-repeat 50%;
     max-width: 100px;
     max-height: 100px;
     width: 150px;
@@ -126,8 +132,9 @@
 }
 .structrue__prop-text{
     padding: 0;
-    margin: 0;
+    margin: 10px 0 0;
     text-align: center;
+    font-size: 1.3rem;
 }
 /*comments*/
 @keyframes tonext {
@@ -229,8 +236,8 @@
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-color: #f99;
     counter-increment: item;
+    background: #fff;
   }
   
   .carousel__slide:nth-child(even) {
@@ -273,7 +280,7 @@
   .carousel__navigation {
     position: absolute;
     right: 0;
-    bottom: -20px;
+    bottom: -40px;
     left: 0;
     text-align: center;
   }
@@ -295,35 +302,47 @@
     transition: transform 0.1s;
   }
 .comments{
-    background: rgb(215,232,255);
-    background: linear-gradient(180deg, rgba(215,232,255,1) 20%, rgba(255,236,253,1) 90%);
+    background: rgb(241,243,255);
+    background: linear-gradient(180deg, rgba(241,243,255,1) 0%, rgba(255,242,255,1) 100%);  
 }
 .comments__container{
-    max-width: 600px;
+    max-width: 580px;
     text-align: center;
     margin: 0 auto;
 }
+.comments__title{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
 .carousel__comments-block{
     height: 100%;
-    margin-top: 20px;
+    padding-top: 20px;
+}
+.photo1{
+    background: url(img/man1.jpg) no-repeat 50%;
+}
+.photo2{
+    background: url(img/man2.jpg) no-repeat 50%;
+}
+.photo3{
+    background: url(img/man3.jpg) no-repeat 50%;
 }
 .carousel__comments-photo{
-    background: url(img/prod.png) no-repeat 50%;
     max-width: 200px;
     max-height: 200px;
     width: 150px;
     height: 150px;
     background-size: contain;
     border-radius: 100%;
-    margin: 20px auto;  
+    margin: 15px auto 0;  
 }
 .carousel__comments-name{
     font-size: 1.5rem;
     font-weight: bold;
 }
 .carousel__comments-desc{
-    background: #fcc;
     width: 70%;
+    font-size: 1.2rem;
     margin: 0 auto;
     height: 155px;
     display: block;
@@ -332,6 +351,10 @@
     overflow: hidden;
 }
 /*description*/
+.description{
+    background: rgb(241,243,255);
+    background: linear-gradient(180deg, rgba(241,243,255,1) 0%, rgba(255,242,255,1) 100%);
+}
 .description__container{
     padding: 0;
     max-width: 1425px;
@@ -365,4 +388,153 @@
 }
 .description__prop-item{
     font-size: 3rem;
+}
+
+/* Устанавливаем высоту и ширину контейнера */
+.base-timer {
+    position: relative;
+    height: 300px;
+    width: 300px;
+  }
+  
+  /* Удаляем стили SVG, которые могли бы скрыть временную метку */
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  /* Контур SVG, который отображает прогресс времени */
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+
+/*buy-form*/
+.buy_form{
+    background: rgb(241,243,255);
+    background: linear-gradient(180deg, rgba(241,243,255,1) 0%, rgba(255,242,255,1) 100%);
+}
+.buy_form__container{
+    padding: 0;
+    max-width: 1425px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+.buy_form__order{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+    margin-top: 40px;
+}
+.buy_form__label{
+    display: block;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+.buy_form__btn{
+    background: rgb(204,158,236);
+    background: linear-gradient(90deg, rgba(204,158,236,1) 25%, rgba(154,195,249,1) 100%);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #432144;
+    width: 100%;
+    border: 0;
+    height: 40px;
+}
+.form-name, .form-tel{
+    border: 1px solid #d497dd;
+    background: #fef5ff;
+    height: 45px;
+    margin: 0 0 30px;
+}
+.buy_form__title{
+    text-align: center;
+    margin: 10px auto 0;
+    font-size: 3rem;
+}
+.buy_form__under-title{
+    text-align: center;
+    margin: 10px auto;
+    color: #232959;
+    display: block;
+    width: 221px;
+    padding: 10px 0;
+    font-size: 1rem;
+    letter-spacing: 0,2px;
+    font-weight: bold;
+    background: rgb(204,158,236);
+    background: linear-gradient(90deg, rgba(204,158,236,1) 25%, rgba(154,195,249,1) 100%);
+}
+.buy_form__promo{
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+.buy_form__img{
+    max-width: 200px;
+}
+.buy_form__price{
+    margin: 30px 0 0 0;
+}
+.buy_form__old-price{
+    text-decoration: line-through;
+    font-size: 2rem;
+    display: inline;
+    margin-right: 15px;
+}
+.buy_form__name-label, .buy_form__tel-label{
+    display: block;
+}
+.buy_form__right{
+    border: 10px solid #d497dd;
+    padding: 25px;
+    min-height: 410px;
+}
+.buy_form__left{
+    text-align: center;
+}
+.floating-label{
+    opacity: 0;
+}
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+    top: 7px;
+    right: 7px;
+    font-size: 11px;
+    opacity: 1;
+}
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    right: 7px;
+    top: 7px;
+    transition: 0.2s ease all;
+}
+.buy_form__name-input{
+    position: relative;
+}
+@keyframes priceAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(0.95, 0.95, 0.95);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+.buy_form__new-price{
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: inline-block;
+    animation: priceAnim 2s infinite;
+    color: #2fbc2f;
 }
