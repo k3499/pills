@@ -220,12 +220,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 250px; 
+    gap: 150px; 
     padding: 0;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 .description__prop-item{
-    font-size: 3rem;
+    font-size: 2rem;
+    background: #be7bc8;
+    color: #fff;
+    padding: 8px 20px;
+    min-width: 265px;
+    text-align: center;
 }
 
 /* Устанавливаем высоту и ширину контейнера */
@@ -358,6 +363,10 @@ input:not(:focus):valid ~ .floating-label{
 .buy_form__name-input{
     position: relative;
 }
+#time{
+  color: #aa2fbc;
+  font-weight: bold;
+}
 @keyframes priceAnim {
 	0% {
 		transform: scale3d(1, 1, 1);
@@ -385,13 +394,25 @@ input:not(:focus):valid ~ .floating-label{
         padding: 0 40px;
     }
     .description__prop-item {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .description__prop {
-        gap: 150px;
+        gap: 100px;
     }
+    
+}
+@media screen and (max-width: 1210px) {
+  .description__prop {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 100px;
+    list-style: none;
+  }
 }
 @media screen and (max-width: 920px) {
+    .description__img{
+      max-width: 300px;
+    }
     .description__container-head {
         flex-direction: column-reverse;
         gap: 15px;
@@ -402,18 +423,20 @@ input:not(:focus):valid ~ .floating-label{
         gap: 20px;
     }
     .buy_form__right {
-        border: 5px solid #d497dd;
-        width: 100%;
-        max-width: 600px;
+      border: 5px solid #d497dd;
+      width: 100%;
+      max-width: 600px;
+      padding: 0 10px;
+      box-sizing: border-box;
     }
     .form-name, .form-tel {
-        width: 100%;
+      width: 100%;
     }
     .buy_form__btn {
-        height: 60px;
+      height: 60px;
     }
     .section, .buy_form__container, .description__container {
-        height: auto;
+      height: auto;
     }
     .description__text {
         padding: 0 15px;
@@ -422,6 +445,7 @@ input:not(:focus):valid ~ .floating-label{
         flex-direction: column;
         gap: 30px;
         margin-bottom: 100px;
+        list-style: none;
     }
     .comments__container {
         min-height: 680px;
@@ -453,5 +477,71 @@ input:not(:focus):valid ~ .floating-label{
   }
   .slider__buyer-bio {
     font-size: 1.3rem;
+  }
+  .promo__container{
+    min-height: 1000px;
+  }
+  .promo__prod-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .promo__param-item {
+    font-size: 1.2rem;
+    padding-left: 14px;
+    line-height: 1.3;
+  }
+  .promo__num {
+    font-size: 2rem;
+  }
+  .promo__param {
+    list-style: none;
+    padding: 0 10px;
+    margin: 25px 0 0 0;
+    display: flex;
+    gap: 27px;
+  }
+  
+}
+/* Вертикальные */
+@media (max-height: 700px) {
+  .promo__title{
+    font-size: 3rem;
+  }
+  .promo__under-title {
+    font-size: 1.2rem;
+  }
+  .promo__param-item {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+  .promo__product {
+    height: 45vh;
+  }
+  .structure__product {
+    padding: 30px 0;
+  }
+  .structure__container {
+    gap: 20px 0px;
+  }
+  .slider{
+    margin: 0 auto;
+  }
+  .slider__block {
+    height: 450px;
+  }
+  .slider__buyer {
+    margin: 20px auto 35px;
+  }
+  .comments__title {
+    margin-bottom: 25px;
+  }
+  .description__img{
+    max-height: 400px;
+  }
+  .buy_form__right {
+    min-height: 300px;
+  }
+  .buy_form__img {
+    max-width: 170px;
   }
 }
